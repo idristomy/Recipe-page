@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root{
+    --paragraph: 16px;
+    --title-color: hsl(14, 45%, 36%);
+    --main-box-color: hsl(0, 0%, 100%);
+    --background-color: hsl(30, 54%, 90%);
+    --title-font: "Young-serif";
+    --paragraph-font: "Outfit", sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--background-color);
+}
+.recipt-box{
+
+    background-color: var(--main-box-color);
+    padding: 40px;
+    border-radius: 30px;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -10%);
+    }
+
+
+.recipt-box img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+.description h1{
+    font-family: var(--title-font);
+    padding-top: 20px;
+    font-size: 2.5rem;
+}
+p{
+    font-family: var(--paragraph-font);
+    font-weight: 400;
+    padding: 30px 0px;
+}
+
+.preparation{
+    background-color: hsl(330, 100%, 98%);
+    padding: 20px;
+    border-radius: 20px;
+}
+.preparation h5{
+    color: hsl(332, 51%, 32%);
+    font-size: 25px;
+    font-family: var(--title-font);
+}
+.preparation ul{
+    padding: 25px;
+}
+.preparation li{
+    padding: 10px;
+    font-family: var(--paragraph-font);
+}
+bold{
+    font-weight: 800;
+}
+.preparation ul li::marker{
+    color: hsl(332, 51%, 32%);
+}
+.ingredients{
+    padding: 30px 0px;
+    border-bottom: 0.5px solid hsl(0, 0%, 70%);
+}
+h2{
+    font-family: var(--title-font);
+    color: var(--title-color);
+    font-size: 35px;
+}
+.ingredients ul{
+    padding: 20px;
+}
+.ingredients li{
+    padding: 10px;
+    font-family: var(--paragraph-font);
+}
+.ingredients ul li::marker{
+    color: var(--title-color);
+}
+.instructions{
+    padding: 30px 0px;
+}
+.instructions ul{
+    padding: 20px;
+    list-style: decimal;
+}
+.instructions ul li::marker{
+    color: var(--title-color);
+}
+.instructions li{
+    padding: 10px;
+    font-family: var(--paragraph-font);
+}
+
+.box-detailes{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 30px;
+    border-bottom: 0.5px solid hsl(0, 0%, 70%);
+}
+.box-detailes:nth-child(6){
+    border: none;
+}
+.box-detailes .num{
+    text-align: start;
+    padding-right: 150px;
+    font-weight: 800;
+    color: var(--title-color);
+}
+
+@media screen and (max-width:700px) {
+    .recipt-box{
+        background-color: var(--main-box-color);
+        position: relative;
+        transform: translate(50%, 0%);
+        margin-bottom: 30px;
+        padding: 0px !important;
+    }
+    .recipt-box img{
+        border-radius: 0;
+    }
+    .recipt{
+        padding: 20px;
+    }
+    .attribution{
+        position: relative;
+        bottom: 0%;
+    }
+    .box-detailes .num{
+        padding-right: 0;
+    }
+}
